@@ -7,20 +7,28 @@ import {
 } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { COLLECTION_SLUG_MEDIA } from '@/core/collections-slugs'
 
-import { anyone } from '../access/anyone'
-import { authenticated } from '../access/authenticated'
+import { anyone } from '../../access/anyone'
+import { authenticated } from '../../access/authenticated'
+import { addContentHashToFile } from '@/payload/hooks/addContentHashToFileHook'
+import { handleSvgUpload } from '@/payload/hooks/handleSvgUploadHook'
+import { updateCacheControl } from '@/payload/hooks/updateCacheControl'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export const Media: CollectionConfig = {
-  slug: 'media',
+  slug: COLLECTION_SLUG_MEDIA,
   access: {
     create: authenticated,
     delete: authenticated,
     read: anyone,
     update: authenticated,
+  },
+  hooks: {
+    beforeOperation: [addContentHashToFile],
+    afterChange: [updateCacheControl, handleSvgUpload],
   },
   fields: [
     {

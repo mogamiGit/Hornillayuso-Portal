@@ -1,3 +1,4 @@
+import { COLLECTION_SLUG_TAXONOMY } from '@nexo-labs/payload-taxonomies'
 import { BeforeSync, DocToSync } from '@payloadcms/plugin-search/types'
 
 export const beforeSyncWithSearch: BeforeSync = async ({ originalDoc, searchDoc }) => {
@@ -26,7 +27,7 @@ export const beforeSyncWithSearch: BeforeSync = async ({ originalDoc, searchDoc 
         const { id, title } = category
 
         return {
-          relationTo: 'categories',
+          relationTo: COLLECTION_SLUG_TAXONOMY,
           id,
           title,
         }

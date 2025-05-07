@@ -1,0 +1,7 @@
+export const COLLECTION_SLUG_PDF = 'pdf'
+export const COLLECTION_SLUG_MEDIA = 'media'
+export const COLLECTION_SLUG_EXPORTS = 'exports'
+export const COLLECTION_SLUG_USER = 'users'
+export const COLLECTION_SLUG_CATEGORIES = 'categories'
+export const COLLECTION_SLUG_POSTS = 'posts'
+export const COLLECTION_SLUG_PAGES = 'pages'

@@ -26,6 +26,7 @@ import {
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
 import { slugField } from '@/payload/fields/slug'
+import { COLLECTION_SLUG_TAXONOMY } from '@nexo-labs/payload-taxonomies'
 
 export const Posts: CollectionConfig<'posts'> = {
   slug: 'posts',
@@ -130,7 +131,7 @@ export const Posts: CollectionConfig<'posts'> = {
                 position: 'sidebar',
               },
               hasMany: true,
-              relationTo: 'categories',
+              relationTo: COLLECTION_SLUG_TAXONOMY,
             },
           ],
           label: 'Meta',

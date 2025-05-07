@@ -5,6 +5,7 @@ import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 import configPromise from '@payload-config'
+export const dynamic = 'force-dynamic'
 
 export async function GET(
   req: {
