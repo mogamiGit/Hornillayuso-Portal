@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@config "./tailwind.config.mjs";
+
+@theme {
+    --color-primary-50: #D4E4EA;
+}
 
 @layer base {
   h1,
