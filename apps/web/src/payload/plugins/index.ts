@@ -8,8 +8,8 @@ import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '../../utilities/getURL'
 import { plugin as searchPlugin } from './search/plugin'
 import { plugin as formBuilderPlugin } from './formBuilder/plugin'
-import { plugin as redirectsPlugin } from './redirects/plugin'
 import { plugin as importExportPlugin } from './importExport/plugin'
+
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | Payload Website Template` : 'Payload Website Template'
 }
@@ -21,7 +21,6 @@ const generateURL: GenerateURL<Post | Page> = ({ doc }) => {
 }
 
 export const plugins: Plugin[] = [
-//  redirectsPlugin,
   seoPlugin({
     generateTitle,
     generateURL,
@@ -31,5 +30,5 @@ export const plugins: Plugin[] = [
   payloadCloudPlugin(),
   importExportPlugin,
   authJSPlugin,
-  s3Plugin
+  s3Plugin,
 ]

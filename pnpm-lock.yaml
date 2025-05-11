@@ -50,9 +50,6 @@ importers:
       '@payloadcms/plugin-import-export':
         specifier: ^3.37.0
         version: 3.37.0(@payloadcms/ui@3.37.0(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@payloadcms/plugin-redirects':
-        specifier: 3.37.0
-        version: 3.37.0(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
       '@payloadcms/plugin-search':
         specifier: 3.37.0
         version: 3.37.0(@types/react@19.1.0)(graphql@16.11.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3)
@@ -1558,11 +1555,6 @@ packages:
     resolution: {integrity: sha512-2fC/NyiQxIeTHX22swSm0pk8m8aSMJv+esU2kEhe5IMlICDkMhoof5T+COV7jj8LJivAXN+oCB29Q0Z0fY2bmg==}
     peerDependencies:
       '@payloadcms/ui': 3.37.0
-      payload: 3.37.0
-
-  '@payloadcms/plugin-redirects@3.37.0':
-    resolution: {integrity: sha512-D8S7t6fllsVnoTVUxd5Sdv86soXnIYG9CzXWiJLH92hVXe07Ev2uALYoVYY8LVsLVwe5VAoGjzeQ9oArf5nABA==}
-    peerDependencies:
       payload: 3.37.0
 
   '@payloadcms/plugin-search@3.37.0':
@@ -6979,10 +6971,6 @@ snapshots:
     transitivePeerDependencies:
       - react
       - react-dom
-
-  '@payloadcms/plugin-redirects@3.37.0(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))':
-    dependencies:
-      payload: 3.37.0(graphql@16.11.0)(typescript@5.7.3)
 
   '@payloadcms/plugin-search@3.37.0(@types/react@19.1.0)(graphql@16.11.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3)':
     dependencies:

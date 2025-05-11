@@ -31,7 +31,6 @@
     "@payloadcms/payload-cloud": "3.37.0",
     "@payloadcms/plugin-form-builder": "3.37.0",
     "@payloadcms/plugin-import-export": "^3.37.0",
-    "@payloadcms/plugin-redirects": "3.37.0",
     "@payloadcms/plugin-search": "3.37.0",
     "@payloadcms/plugin-seo": "3.37.0",
     "@payloadcms/richtext-lexical": "3.37.0",

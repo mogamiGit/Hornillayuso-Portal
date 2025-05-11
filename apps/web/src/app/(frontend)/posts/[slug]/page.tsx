@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 
 import { RelatedPosts } from '@/payload/blocks/RelatedPosts/Component'
-import { PayloadRedirects } from '@/components/PayloadRedirects'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import { draftMode } from 'next/headers'
@@ -30,17 +29,12 @@ export default async function Post({ params: paramsPromise }: Args) {
   const url = '/posts/' + slug
   const post = await queryPostBySlug({ slug })
 
-  if (!post) return <PayloadRedirects url={url} />
+  if (!post) return null
 
   return (
     <article className="pt-16 pb-16">
       <PageClient />
-
-      {/* Allows redirects for valid pages too */}
-      <PayloadRedirects disableNotFound url={url} />
-
       {draft && <LivePreviewListener />}
-
       <PostHero post={post} />
 
       <div className="flex flex-col items-center gap-4 pt-8">
