@@ -10,9 +10,11 @@
     "start": "turbo run start",
     "start:web": "turbo run start --filter=web",
     "dev": "turbo run dev --parallel",
-    "dev:web": "turbo run dev --filter=web"
+    "dev:web": "turbo run dev --filter=web",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
     "turbo": "^2.4.0"
   },
   "keywords": [],

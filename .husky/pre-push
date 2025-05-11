@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if [ "$(git rev-parse --abbrev-ref HEAD)" = "main" ]; then
+    echo "Ejecutando pnpm build antes de push a main..."
+    pnpm build:web
+    
+    if [ $? -ne 0 ]; then
+        echo "❌ pnpm build falló. Push cancelado."
+        exit 1
+    fi
+    
+    echo "✅ pnpm build completado exitosamente."
+fi 
