@@ -5,20 +5,34 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Next.js: debug full stack",
-      "type": "node",
+      "command": "pnpm storybook",
+      "name": "Run storybook",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/next/dist/bin/next",
-      "runtimeArgs": ["--inspect"],
-      "skipFiles": ["<node_internals>/**"],
+      "type": "node-terminal"
+    },
+    {
+      "command": "pnpm --prefix apps/web run dev",
+      "name": "Run development server",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "url": "http://localhost:3000",
+      "name": "Debug client",
+      "request": "launch",
+      "type": "chrome",
+      "userDataDir": false
+    },
+    {
+      "name": "Debug",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "pnpm --prefix apps/web run dev",
       "serverReadyAction": {
-        "action": "debugWithChrome",
-        "killOnServerStop": true,
         "pattern": "- Local:.+(https?://.+)",
         "uriFormat": "%s",
-        "webRoot": "${workspaceFolder}"
-      },
-      "cwd": "${workspaceFolder}"
+        "action": "debugWithChrome"
+      }
     }
   ]
 }

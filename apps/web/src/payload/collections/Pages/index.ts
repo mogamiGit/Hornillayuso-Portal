@@ -20,6 +20,8 @@ import {
   OverviewField,
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
+import { isAdmin, isAdminAccess, isAdminHidden, isSuperAdmin } from '@/core/permissions'
+import { User } from '@/payload-types'
 
 export const Pages: CollectionConfig<'pages'> = {
   slug: 'pages',
@@ -28,6 +30,7 @@ export const Pages: CollectionConfig<'pages'> = {
     delete: authenticated,
     read: authenticatedOrPublished,
     update: authenticated,
+    admin: () => false,
   },
   // This config controls what's populated by default when a page is referenced
   // https://payloadcms.com/docs/queries/select#defaultpopulate-collection-config-property
@@ -37,6 +40,7 @@ export const Pages: CollectionConfig<'pages'> = {
     slug: true,
   },
   admin: {
+    hidden: isAdminHidden,
     defaultColumns: ['title', 'slug', 'updatedAt'],
     livePreview: {
       url: ({ data, req }) => {

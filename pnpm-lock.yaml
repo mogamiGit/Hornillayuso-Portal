@@ -18,17 +18,17 @@ importers:
         specifier: ^3.741.0
         version: 3.804.0
       '@nexo-labs/hegel':
-        specifier: ^0.9.6
-        version: 0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
+        specifier: ^0.9.9
+        version: 0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
       '@nexo-labs/payload-base-singleton':
-        specifier: ^0.9.6
-        version: 0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
+        specifier: ^0.9.9
+        version: 0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
       '@nexo-labs/payload-stripe-inventory':
-        specifier: ^0.9.6
-        version: 0.9.6(@nexo-labs/hegel@0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3)))(@nexo-labs/payload-base-singleton@0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3)))(@payloadcms/plugin-stripe@3.35.1(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react@19.1.0)(stripe@17.2.1)
+        specifier: ^0.9.9
+        version: 0.9.9(@nexo-labs/hegel@0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3)))(@nexo-labs/payload-base-singleton@0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3)))(@payloadcms/plugin-stripe@3.35.1(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react@19.1.0)(stripe@17.2.1)
       '@nexo-labs/payload-taxonomies':
-        specifier: ^0.9.6
-        version: 0.9.6(@payloadcms/ui@3.37.0(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(@types/json-schema@7.0.15)(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react@19.1.0)
+        specifier: ^0.9.9
+        version: 0.9.9(@payloadcms/ui@3.37.0(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(@types/json-schema@7.0.15)(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react@19.1.0)
       '@payloadcms/admin-bar':
         specifier: 3.37.0
         version: 3.37.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -1381,33 +1381,33 @@ packages:
   '@napi-rs/wasm-runtime@0.2.9':
     resolution: {integrity: sha512-OKRBiajrrxB9ATokgEQoG87Z25c67pCpYcCwmXYX8PBftC9pBfN18gnm/fh1wurSLEKIAt+QRFLFCQISrb66Jg==}
 
-  '@nexo-labs/hegel@0.9.6':
-    resolution: {integrity: sha512-w/Oa6JecLe1Edy388OA+EvFg9QMbvPPTn7Voe+vtOw+RAMDXK7OmMYeo4+8E+ObT/ebckQpmyKZHUx70rS3M0w==}
+  '@nexo-labs/hegel@0.9.9':
+    resolution: {integrity: sha512-YlU8qO+9iz+k4PpsuzKNYdWicqzru6R9/QntTJJFqJS/9U5LvywAtMbg4023V0kkrn/ko2BPux9L2iXgKDhiCw==}
     peerDependencies:
-      payload: ^3.35.1
+      payload: ^3.37.0
 
-  '@nexo-labs/payload-base-singleton@0.9.6':
-    resolution: {integrity: sha512-a4+INWhR8ZJeMEV9M9uNtTSTRGHn+WXu4ySgxJjvFOPfAH5hSKiJvEYuoBAi7C7husqDAgfG7uYCQt/T8EUVTQ==}
+  '@nexo-labs/payload-base-singleton@0.9.9':
+    resolution: {integrity: sha512-E/rNI8TaIhyF+EJd95sTJI5EiaVe6e8zZgKSXNFGKqIj2qSeww2gVx4xmaLQ6+Os7X3oU3pprqSAP3obUCrFHw==}
     peerDependencies:
-      payload: ^3.35.1
+      payload: ^3.37.0
 
-  '@nexo-labs/payload-stripe-inventory@0.9.6':
-    resolution: {integrity: sha512-Q3D5XYvMQHeWJy5RJqRaVc/6ECgZOvmm7VyckPdaOJsotln8aTPpDsQvcFgoe69lcdJF4J1mDNLeubL4xg6eSA==}
+  '@nexo-labs/payload-stripe-inventory@0.9.9':
+    resolution: {integrity: sha512-sx2L94cqkNMsSLqIo40cYiju/MqP0eN0qC7xxF03SBzPGkZ+dX7aujLiYnNC2o9CHPOUBAJ6dBozI41MtXS+pw==}
     peerDependencies:
       '@nexo-labs/hegel': 0.0.0
       '@nexo-labs/payload-base-singleton': 0.0.1
-      '@payloadcms/plugin-stripe': 3.35.1
+      '@payloadcms/plugin-stripe': 3.37.0
       next: 15.2.3
-      payload: ^3.35.1
+      payload: 3.37.0
       react: ^19.0.0
       stripe: 17.2.1
 
-  '@nexo-labs/payload-taxonomies@0.9.6':
-    resolution: {integrity: sha512-lH0Q6b1mBqhZ8+KmfJNqgkvjuND4KQc3yDTyIIbEhitF7kIAw1TU8NBXE74I93e7LixvM9BDIVq6xueblvgm0A==}
+  '@nexo-labs/payload-taxonomies@0.9.9':
+    resolution: {integrity: sha512-MYmECiL4mMXncbiqrqm3z+eK7Pc8ENgV8dawSn3cliGOXOdeyJhBi/JmWHXsqVOFi+mpeVouYt/tD1Wo2t7t2g==}
     peerDependencies:
-      '@payloadcms/ui': ^3.35.1
+      '@payloadcms/ui': ^3.37.0
       '@types/json-schema': ^7.0.11
-      payload: 3.35.1
+      payload: 3.37.0
       react: ^19.0.0
 
   '@next/env@13.5.11':
@@ -6708,27 +6708,27 @@ snapshots:
       '@tybys/wasm-util': 0.9.0
     optional: true
 
-  '@nexo-labs/hegel@0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))':
+  '@nexo-labs/hegel@0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))':
     dependencies:
       jsep: 1.4.0
       payload: 3.37.0(graphql@16.11.0)(typescript@5.7.3)
       react: 19.1.0
 
-  '@nexo-labs/payload-base-singleton@0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))':
+  '@nexo-labs/payload-base-singleton@0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))':
     dependencies:
       payload: 3.37.0(graphql@16.11.0)(typescript@5.7.3)
 
-  '@nexo-labs/payload-stripe-inventory@0.9.6(@nexo-labs/hegel@0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3)))(@nexo-labs/payload-base-singleton@0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3)))(@payloadcms/plugin-stripe@3.35.1(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react@19.1.0)(stripe@17.2.1)':
+  '@nexo-labs/payload-stripe-inventory@0.9.9(@nexo-labs/hegel@0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3)))(@nexo-labs/payload-base-singleton@0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3)))(@payloadcms/plugin-stripe@3.35.1(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react@19.1.0)(stripe@17.2.1)':
     dependencies:
-      '@nexo-labs/hegel': 0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
-      '@nexo-labs/payload-base-singleton': 0.9.6(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
+      '@nexo-labs/hegel': 0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
+      '@nexo-labs/payload-base-singleton': 0.9.9(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))
       '@payloadcms/plugin-stripe': 3.35.1(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3)
       next: 15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4)
       payload: 3.37.0(graphql@16.11.0)(typescript@5.7.3)
       react: 19.1.0
       stripe: 17.2.1
 
-  '@nexo-labs/payload-taxonomies@0.9.6(@payloadcms/ui@3.37.0(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(@types/json-schema@7.0.15)(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react@19.1.0)':
+  '@nexo-labs/payload-taxonomies@0.9.9(@payloadcms/ui@3.37.0(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3))(@types/json-schema@7.0.15)(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react@19.1.0)':
     dependencies:
       '@payloadcms/ui': 3.37.0(@types/react@19.1.0)(monaco-editor@0.52.2)(next@15.3.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.77.4))(payload@3.37.0(graphql@16.11.0)(typescript@5.7.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.7.3)
       '@types/json-schema': 7.0.15

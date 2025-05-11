@@ -18,6 +18,7 @@ declare global {
       S3_ACCESS_KEY_ID: string
       S3_SECRET_ACCESS_KEY: string
       SUPER_ADMIN_EMAIL: string
+      ENABLED_SUPER_ADMIN: string
     }
   }
 }

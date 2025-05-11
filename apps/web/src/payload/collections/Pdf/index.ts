@@ -11,7 +11,6 @@ export const Pdf: CollectionConfig = {
   },
   admin: {
     useAsTitle: 'title',
-    group: 'Contenido',
     components: {
       views: {
         list: {

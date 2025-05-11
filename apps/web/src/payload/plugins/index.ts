@@ -21,7 +21,7 @@ const generateURL: GenerateURL<Post | Page> = ({ doc }) => {
 }
 
 export const plugins: Plugin[] = [
-  redirectsPlugin,
+//  redirectsPlugin,
   seoPlugin({
     generateTitle,
     generateURL,
