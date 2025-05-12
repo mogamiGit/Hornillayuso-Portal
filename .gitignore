@@ -39,6 +39,7 @@ package
 *.env
 .env.docker
 !.example.docker.env
+!.example.devcontainer.env
 !.env.*.example
 
 misc
