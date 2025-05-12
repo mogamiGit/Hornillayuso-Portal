@@ -20,8 +20,7 @@ import {
   OverviewField,
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
-import { isAdmin, isAdminAccess, isAdminHidden, isSuperAdmin } from '@/core/permissions'
-import { User } from '@/payload-types'
+import { isAdminHidden } from '@/core/permissions'
 
 export const Pages: CollectionConfig<'pages'> = {
   slug: 'pages',

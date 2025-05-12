@@ -1,4 +1,3 @@
-import { permissionSlugs } from 'node_modules/@nexo-labs/payload-stripe-inventory/dist/common/constants'
 import { Taxonomy, User } from '@/payload-types'
 import { ClientUser, PayloadRequest } from 'payload'
 
@@ -12,16 +11,15 @@ export const permissions = {
   familia,
 }
 
-type CommonAccess = ({ req }: {
-  req: PayloadRequest;
-}) => boolean | Promise<boolean>
+type CommonAccess = ({ req }: { req: PayloadRequest }) => boolean | Promise<boolean>
 
 type RoleSlug = (typeof permissions)[keyof typeof permissions]
 
 export const isSuperAdminEnabled = () => process.env.ENABLED_SUPER_ADMIN === 'true'
 
 export const isSuperAdmin = ({ user }: { user?: User | null }): boolean => {
-  const _isSuperAdminEnabled = isSuperAdminEnabled() && process.env.SUPER_ADMIN_EMAIL === user?.email
+  const _isSuperAdminEnabled =
+    isSuperAdminEnabled() && process.env.SUPER_ADMIN_EMAIL === user?.email
   console.warn(`isSuperAdminEnabled: ${_isSuperAdminEnabled}`)
   return _isSuperAdminEnabled
 }
@@ -32,9 +30,9 @@ export const isAdmin = ({ user }: { user?: User | null }): boolean => {
   return isAdmin
 }
 
-export type IsAdminHiddenProps = ((args: {
-  user: PayloadRequest['user'] | ClientUser;
-}) => boolean) | boolean 
+export type IsAdminHiddenProps =
+  | ((args: { user: PayloadRequest['user'] | ClientUser }) => boolean)
+  | boolean
 
 export const isAdminHidden: IsAdminHiddenProps = ({ user }) => {
   const isAdminEnabled = isAdmin({ user: user as unknown as User })
@@ -73,9 +71,5 @@ export const checkRolesAccess: (props: { rolesSlug: RoleSlug[] }) => CommonAcces
   }
 
 export const checkRoles = ({ rolesSlug, user }: CheckRolesProps): boolean => {
-  return (
-    user?.roles
-      ?.cast<Taxonomy>()
-      .some((role) => rolesSlug.includes(role.slug ?? '')) ?? false
-  )
+  return user?.roles?.cast<Taxonomy>().some((role) => rolesSlug.includes(role.slug ?? '')) ?? false
 }

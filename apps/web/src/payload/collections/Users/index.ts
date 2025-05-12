@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload'
 import { COLLECTION_SLUG_USER } from '@/core/collections-slugs'
 import { authenticated } from '@/payload/access/authenticated'
-import { buildTaxonomyRelationship, taxonomyRelationship } from '@nexo-labs/payload-taxonomies'
+import { buildTaxonomyRelationship } from '@nexo-labs/payload-taxonomies'
 
 export const Users: CollectionConfig = {
   slug: COLLECTION_SLUG_USER,

@@ -1,7 +1,6 @@
-import { COLLECTION_SLUG_PDF } from "@/core/collections-slugs"
-import { addContentHashToFile } from "@/payload/hooks/addContentHashToFileHook"
-import { CollectionConfig } from "payload"
-import { buildPermissionsCollection } from "@nexo-labs/payload-stripe-inventory/access"
+import { COLLECTION_SLUG_PDF } from '@/core/collections-slugs'
+import { addContentHashToFile } from '@/payload/hooks/addContentHashToFileHook'
+import { CollectionConfig } from 'payload'
 
 export const Pdf: CollectionConfig = {
   slug: COLLECTION_SLUG_PDF,
@@ -14,14 +13,13 @@ export const Pdf: CollectionConfig = {
     components: {
       views: {
         list: {
-          actions: [
-          ],
+          actions: [],
         },
       },
-    }
+    },
   },
   hooks: {
-    beforeOperation: [addContentHashToFile]
+    beforeOperation: [addContentHashToFile],
   },
   fields: [
     {
@@ -29,6 +27,6 @@ export const Pdf: CollectionConfig = {
       name: 'title',
       type: 'text',
       required: true,
-    }
+    },
   ],
 }

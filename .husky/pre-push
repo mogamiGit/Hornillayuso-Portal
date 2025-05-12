@@ -3,7 +3,9 @@
 
 if [ "$(git rev-parse --abbrev-ref HEAD)" = "main" ]; then
     echo "Ejecutando pnpm build antes de push a main..."
-    pnpm build:web
+    cd apps/web
+    DATABASE_NAME=pafe_db_build pnpm payload migrate
+    DATABASE_NAME=pafe_db_build pnpm build
     
     if [ $? -ne 0 ]; then
         echo "❌ pnpm build falló. Push cancelado."

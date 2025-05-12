@@ -1,12 +1,12 @@
-import { S3_PLUGIN_CONFIG } from "@/payload/plugins/s3"
+import { S3_PLUGIN_CONFIG } from '@/payload/plugins/s3'
 import {
   CopyObjectCommand,
   CopyObjectCommandInput,
   HeadObjectCommand,
   HeadObjectCommandOutput,
   S3Client,
-} from "@aws-sdk/client-s3"
-import { CollectionAfterChangeHook, CollectionBeforeChangeHook } from "payload"
+} from '@aws-sdk/client-s3'
+import { CollectionAfterChangeHook } from 'payload'
 
 const fetchObjectMetadata = async (
   s3: S3Client,
@@ -44,7 +44,7 @@ const updateCacheControlForKey = async (key: string, cacheControl: string) => {
     const copyCommand = new CopyObjectCommand(copyParams)
     const copyResult = await s3.send(copyCommand)
     return copyResult
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error updating object metadata:', error)
     return null
   } finally {
@@ -52,7 +52,7 @@ const updateCacheControlForKey = async (key: string, cacheControl: string) => {
   }
 }
 
-export const updateCacheControl: CollectionAfterChangeHook = async ({ doc, context, req }) => {
+export const updateCacheControl: CollectionAfterChangeHook = async ({ doc, context }) => {
   if (context?.triggerAfterChange === false) return
 
   const cacheControl = context.filenameHasContentHash
