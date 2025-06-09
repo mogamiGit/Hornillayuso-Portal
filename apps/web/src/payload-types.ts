@@ -395,6 +395,8 @@ export interface Post {
     | null;
   slug?: string | null;
   slugLock?: boolean | null;
+  startEventDate?: string | null;
+  endEventDate?: string | null;
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -1326,6 +1328,8 @@ export interface PostsSelect<T extends boolean = true> {
       };
   slug?: T;
   slugLock?: T;
+  startEventDate?: T;
+  endEventDate?: T;
   updatedAt?: T;
   createdAt?: T;
   _status?: T;

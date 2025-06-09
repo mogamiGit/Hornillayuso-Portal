@@ -219,6 +219,26 @@ export const Posts: CollectionConfig<'posts'> = {
       ],
     },
     ...slugField(),
+    {
+      name: 'startEventDate',
+      type: "date", 
+      admin: {
+        date: {
+          pickerAppearance: 'dayAndTime',
+        },
+        position: 'sidebar',
+      }
+    },
+    {
+      name: 'endEventDate',
+      type: "date", 
+      admin: {
+        date: {
+          pickerAppearance: 'dayAndTime',
+        },
+        position: 'sidebar',
+      }
+    }
   ],
   hooks: {
     afterChange: [revalidatePost],
