@@ -14,6 +14,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "figma-developer-mcp": "^0.4.1",
     "husky": "^9.1.7",
     "turbo": "^2.4.0"
   },
